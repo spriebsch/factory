@@ -164,7 +164,7 @@ class MasterFactory implements MasterFactoryInterface
 
     /**
      * Returns the factory instance that can instantiate the given type
-     * hasType() check deliberately left out, as it woule be untestable due
+     * hasType() check deliberately left out, as it would be untestable due
      * to the "already registered" guard clause in getInstance().
      *
      * @param $type

@@ -42,10 +42,10 @@ class Factory extends AbstractFactory
     {
         switch ($type) {
             case 'framework_X':
-                return $this->originalFactory->getInstance('spriebsch\\factory\\demo\\framework\\X', $this->getParams());
+                return $this->originalFactory->getInstance('spriebsch\\factory\\demo\\framework\\X', $params);
 
             case 'framework_Y':
-                return $this->originalFactory->getInstance('spriebsch\\factory\\demo\\framework\\Y', $this->getParams());
+                return $this->originalFactory->getInstance('spriebsch\\factory\\demo\\framework\\Y', $params);
 
             default:
                 throw new Exception('Unknown type "' . $type . '"');
