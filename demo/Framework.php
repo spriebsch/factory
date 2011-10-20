@@ -14,7 +14,7 @@ class Factory extends AbstractFactory
      * @var OriginalFactory
      */
     protected $originalFactory;
-    
+
     /**
      * @var array
      */
@@ -62,6 +62,8 @@ class OriginalFactory
                 return new X();
             case 'spriebsch\\factory\\demo\\framework\\Y';
                 return new Y();
+            default:
+                throw new Exception('Invalid instance class given');
         }
     }
 }

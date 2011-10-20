@@ -138,7 +138,7 @@ class MasterFactory implements MasterFactoryInterface
 
         return $result . PHP_EOL;
     }
-    
+
     /**
      * Adds a type and a reference to the factory that can instantiate this type
      *
@@ -174,13 +174,13 @@ class MasterFactory implements MasterFactoryInterface
     {
         return $this->typeMap[$type];
     }
- 
+
     /**
      * Checks whether given factory is already registered
      *
      * @param ChildFactoryInterface $factory
      * @return bool
-     */   
+     */
     protected function isRegistered(ChildFactoryInterface $factory)
     {
         foreach (array_values($this->typeMap) as $f) {
@@ -188,7 +188,7 @@ class MasterFactory implements MasterFactoryInterface
                 return TRUE;
             }
         }
-        
+
         return FALSE;
     }
 }
