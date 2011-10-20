@@ -69,7 +69,7 @@ class MasterFactory implements MasterFactoryInterface
                 FactoryException::TYPE_CANNOT_INSTANTIATE);
         }
 
-        $factory = $this->getType($type);
+        $factory = $this->getFactoryFor($type);
         return call_user_func_array(array($factory, 'getInstanceFor'), func_get_args());
     }
 
@@ -170,7 +170,7 @@ class MasterFactory implements MasterFactoryInterface
      * @param $type
      * @return NULL
      */
-    protected function getType($type)
+    protected function getFactoryFor($type)
     {
         return $this->typeMap[$type];
     }

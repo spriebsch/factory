@@ -77,10 +77,10 @@ abstract class AbstractFactory implements ChildFactoryInterface
             return call_user_func_array(array($this->masterFactory, 'getInstanceFor'), func_get_args());
         }
 
-        $result = call_user_func_array(array($this, 'doGetInstanceFor'), func_get_args());
+        $result = call_user_func(array($this, 'doGetInstanceFor'), $type, array_slice(func_get_args(), 1));
 
         if (!is_object($result)) {
-            throw new FactoryException('Method doGetInstanceFor() dod not return object',
+            throw new FactoryException('Method doGetInstanceFor() did not return object',
                 FactoryException::TYPE_ILLEGAL_RETURN_VALUE);
         }
 
@@ -97,7 +97,7 @@ abstract class AbstractFactory implements ChildFactoryInterface
     {
         $this->masterFactory = $factory;
     }
-    
+
     /**
      * Returns the master factory
      *
@@ -135,7 +135,7 @@ abstract class AbstractFactory implements ChildFactoryInterface
      *
      * @param string $type
      * @param array $parameters
-     * @return object    
+     * @return object
      */
     abstract protected function doGetInstanceFor($type, array $parameters = array());
 }

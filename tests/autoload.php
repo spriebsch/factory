@@ -1,4 +1,4 @@
-<?php // @codeCoverageIgnoreFile
+<?php // @startCodeCoverageIgnore
 spl_autoload_register(
    function($class) {
       static $classes = null;
