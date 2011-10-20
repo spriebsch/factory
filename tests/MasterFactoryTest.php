@@ -229,7 +229,6 @@ class MasterFactoryTest extends PHPUnit_Framework_TestCase
      * Makes sure getInstance() returns an object instance
      *
      * @covers spriebsch\factory\MasterFactory::getInstanceFor
-     * @covers spriebsch\factory\MasterFactory::getType
      */
     public function testGetInstanceReturnsObjectInstance()
     {
