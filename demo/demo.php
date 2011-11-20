@@ -45,7 +45,7 @@ var_dump($serviceLocator->getServiceD());
 var_dump(get_class($factory->getInstanceFor('library_A')));
 var_dump(get_class($factory->getInstanceFor('library_B')));
 
-// By printing the factory (or casting it to string), we get an overwiev
+// By printing the factory (or casting it to string), we get an overview
 // of all registered child factories and the types they can create
 print $factory;
 

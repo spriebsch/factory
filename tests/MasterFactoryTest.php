@@ -75,7 +75,7 @@ class MasterFactoryTest extends PHPUnit_Framework_TestCase
         $this->factory = new MasterFactory();
         $this->childFactory = $this->getMock('spriebsch\\factory\\ChildFactoryInterface');
     }
-    
+
     /**
      * Destroys the test fixture.
      *
@@ -100,7 +100,7 @@ class MasterFactoryTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Makes sure that getTypes() initially returns an emtpy array
+     * Makes sure that getTypes() initially returns an empty array
      *
      * @covers spriebsch\factory\MasterFactory::getTypes
      */
@@ -120,7 +120,7 @@ class MasterFactoryTest extends PHPUnit_Framework_TestCase
     {
         $this->setGetTypesExpectation();
         $this->factory->register($this->childFactory);
-        
+
         $this->secondChildFactory = $this->getMock('spriebsch\\factory\\ChildFactoryInterface');
         $this->secondChildFactory->expects($this->once())
                                  ->method('getTypes')
@@ -245,7 +245,7 @@ class MasterFactoryTest extends PHPUnit_Framework_TestCase
 
         $this->assertSame($stub, $this->factory->getInstanceFor($this->type));
     }
-    
+
     /**
      * Makes sure that __toString() output contains master factory class name
      *

@@ -18,7 +18,7 @@ class Factory extends AbstractFactory
 
             case 'library_B':
                 return new B($this->getInstanceFor('library_A'));
-// if this has to be a certain instance (not a type), call doGetInstanceFor instead of getInstenceFor
+// if this has to be a certain instance (not a type), call doGetInstanceFor instead of getInstanceFor
             break;
 
             default:

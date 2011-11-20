@@ -58,7 +58,7 @@ class AbstractFactoryTest extends PHPUnit_Framework_TestCase
     {
         $this->factory = new FactoryStub();
     }
-    
+
     /**
      * Destroys the test fixture.
      *
